@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //11. Uma micro calculadora
+        // Escreva um programa para ler 2 valores inteiros informados pelo usuário e uma das seguintes operações a serem executadas (codificada da seguinte forma: 1. Adição, 2. Subtração, 3. Divisão, 4. Multiplicação).
+        // O programa deve calcular e escrever o resultado dessa operação sobre os dois valores lidos. 
+       
+        let num1 = parseFloat(prompt("Digite o 1º número:"));
+
+        let operador = parseInt(prompt("[1]-Adição\n[2]-Subtração\n[3]-Divisão\n[4]-Multiplicação"));
+        while(operador < 1 || operador > 4){
+            operador = parseInt(prompt("Digite novamente:\n[1]-Adição\n[2]-Subtração\n[3]-Divisão\n[4]-Multiplicação"));
+            if(operador > 1 && operador < 5){
+                break;
+            }
+        }
+
+        let num2 = parseFloat(prompt("Digite o 2º número:"));
+
+        let resul;
+        let Str;
+        let ligação;
+
+        switch(operador){
+            case 1:
+                resul = num1+num2;
+                Str = " Adição ";
+                ligação = " com ";
+                break;
+            case 2:
+                resul = num1-num2;
+                Str = " Subtração ";
+                ligação = " menos ";
+                break;
+            case 3:
+                resul = num1/num2;
+                Str = " Divisão ";
+                ligação = " por ";
+                break;
+            case 4:
+                resul = num1*num2;
+                Str = " Multiplicação ";
+                ligação = " por ";
+                break;
+        }
+
+        alert("A"+Str+"de "+num1+ligação+num2+" é igual a "+resul)
+
+
+    </script>
+</body>
+
+</html>

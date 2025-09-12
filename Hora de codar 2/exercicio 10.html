@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 10</title>
+</head>
+
+<body>
+    <script>
+        //10. Tendo como entrada a altura e o gênero designado ao nascer (codificado da seguinte forma: 1: feminino - 2: masculino - ) de uma pessoa, construa um programa que calcule e imprima seu peso ideal, utilizando as seguintes fórmulas.
+
+        alert("Olá, vamos calcular seu peso ideal?\nÉ sempre importante cuidar da nossa saúde.");
+        let h = parseFloat(prompt("Para começar, digite sua altura seguindo o exemplo [x.xx]: "));
+        console.log("tipo: " + typeof h)
+        console.log("Altura do individuo:" + h);
+        
+        if (h > 0 || h < 4) {
+            var identidade = parseInt(prompt("Digite seu sexo:\n[1] - Masculino\n[2] - Feminino"));
+            while (identidade != 1 && identidade != 2) {
+                var identidade = parseInt(prompt("Informação não reconhecida!\n\nDigite novamente seu sexo:\n[1] - Masculino\n[2] - Feminino"));
+            }
+
+            console.log("Opção escolhida: " + identidade);
+            switch (identidade) {
+                case 1:
+                    var peso_ideal = (72.7 * h) - 58;
+                    alert("Seu 'peso ideal' seria: " + peso_ideal + "Kg .");
+                    break;
+                case 2:
+                    var peso_ideal = (62.1 * h) - 44.7;
+                    alert("Seu 'peso ideal' seria: " + peso_ideal + "Kg .");
+                    break;
+            }
+        } else {
+            alert("Número inválido, recarregue a página novamente e digite um valor válido");
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 9</title>
+</head>
+<body>
+    <script>
+        //9. Escreva um programa para ler o ano de nascimento de uma pessoa e escrever uma mensagem que diga se ela poderá ou não votar este ano (não é necessário considerar o mês em que ela nasceu).
+        alert("Vamos descobrir se você pode votar?");
+        let ano = parseInt(prompt("Digite o ano atual:"));
+        console.log("Ano atual: "+ano);
+        let nascimento = parseInt(prompt("Digite o ano em que você nasceu:"))
+        console.log("Ano de Nascimento: "+nascimento);
+
+        let idade = ano-nascimento;
+        if(idade < 16){
+            alert("Sua idade é: "+idade+"\nVocê ainda não pode votar.");
+            console.log("idade: "+idade);
+        }else if(idade > 16 && idade < 18){
+            alert("Sua idade é: "+idade+"\nSe você quiser, pode votar.");
+            console.log("idade: "+idade);
+        }else if(idade > 18 && idade < 64){
+            alert("Sua idade é: "+idade+"\nVocê deve votar.");
+            console.log("idade: "+idade);
+        }else if(idade > 64 && idade < 100){
+            alert("Sua idade é: "+idade+"\nSe você quiser, pode votar.");
+            console.log("idade: "+idade);
+        }else if(idade > 100){
+            let resposta = parseInt(prompt("Sua idade é: "+idade+"\nCOMO PODE VOCÊ ESTAR VIVO??"));
+            alert("Ata, mesmo assim não acredito.");
+            console.log("idade: "+idade);
+        }
+
+
+    </script>
+</body>
+</html>

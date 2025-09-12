@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 8</title>
+</head>
+
+<body>
+    <script>
+        //8. Escreva um programa que calcule a média de quatro números informados pelo usuário, mas somente se esses números forem maiores que 0 e menores que 10. No final, se a média for maior que cinco o usuário receberá uma mensagem "Você passou no teste". Em qualquer outra situação, ele receberá uma mensagem de "tente novamente"
+
+        var soma = 0;
+        var media;
+
+        let qtdnum = parseInt(prompt("Digite quantos números serão calculados:"));
+        console.log("Quantidade de números que devem ser digitados:"+qtdnum);
+
+        var num = [qtdnum];
+
+        for (var i = 0; i < qtdnum; i++) {
+            num[i] = parseInt(prompt("Digite o " + (i + 1) + "º número:"));
+            if (num[i] > 0 || num[i] < 10) {
+                console.table((i+1)+"º número digitado: "+num[i]);
+                soma += num[i];
+            }
+        }
+        console.log("soma dos números digitados: "+soma);
+
+        media = soma / qtdnum;
+        console.log("Números somados: "+soma+"\nDIVIDIDOS\nPela quantidade de números digitados: "+qtdnum+"\nmedia: " + media);
+
+        if (media > 5) {
+            alert("Sua média: " + media + "\nVocê passou no teste!");
+        } else {
+            alert("Sua média: " + media + "\nInfelizmente você não passou, tente novamente");
+        }
+
+    </script>
+</body>
+
+</html>
